@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript" src="index.min.js"></script>
+    <script type="text/javascript">
+        var Cookies = Cookie.default;
+
+        console.log(Cookies.getItem("aaa"));
+        // 设置cookie
+        Cookies.setItem("aaa", "aaaaa");
+        Cookies.setItem("bbb", "bbbbb");
+
+        // 获取cookie
+        console.log(Cookies.getItem("aaa"));
+
+        // 获取所有cookie
+        console.log(Cookies.getAll());
+
+        // 移除某个cookie
+        Cookies.removeItem("aaa");
+        console.log(Cookies.getAll());
+
+        // 移除所有cookie
+        Cookies.clear( /*domain*/ );
+        console.log(Cookies.getAll());
+        console.log(Cookies.getItem("aaa"));
+    </script>
+</body>
+
+</html>
